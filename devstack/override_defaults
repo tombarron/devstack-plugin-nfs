@@ -1,0 +1,12 @@
+XTRACE=(set -o | grep xtrace)
+set +o xtrace
+
+ENABLE_NFS_CINDER=$(trueorfalse True ENABLE_NFS_CINDER)
+
+if [[ $ENABLE_NFS_CINDER == "True" ]]; then
+    CINDER_DRIVER=nfs
+    CINDER_ENABLED_BACKENDS=nfs:nfs
+fi
+
+
+$XTRACE
