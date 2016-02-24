@@ -1,7 +1,7 @@
 #
 
 XTRACE=$(set +o | grep xtrace)
-set +o xtrace
+#set +o xtrace
 
 NFS_EXPORT_DIR=${NFS_EXPORT_DIR:-/srv/nfs1}
 STACK_NFS_CONF=${STACK_NFS_CONF:-/etc/exports.d/stack_nfs}
